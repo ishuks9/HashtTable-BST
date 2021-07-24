@@ -12,11 +12,34 @@ public class BSTImp<T> {
 	public static void main(String[] args) {
 		int [] num = {56,30,70};
 		Node root = null;
+		for (int i : num) {
+			System.out.println(num);
+		}
 }
-
-   public int checkSize() {
+	public int checkSize() {
 		return size; 
 	}
+	
+	 public void searchNode(Node<T> node,int data){
+
+	        boolean flag = false;
+	        if(node == null)
+	            System.out.println("Tree is empty");
+	        else {
+	            if (node.data == data) {
+	                flag = true;
+	                System.out.println(data + " is present in BST");
+	                return;
+	            }
+	            if(flag == false && node.left != null){
+	                searchNode(node.left,data);
+	            }
+	            if (flag == false && node.right != null){
+	                searchNode(node.right,data);
+	            }
+	        }
+	        System.out.println(data+" is not present in BST ");
+	    }
 	  
 	public void insertNewNode(int data) {
 
