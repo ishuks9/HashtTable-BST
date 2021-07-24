@@ -13,6 +13,10 @@ public class BSTImp<T> {
 		int [] num = {56,30,70};
 		Node root = null;
 }
+
+   public int checkSize() {
+		return size; 
+	}
 	  
 	public void insertNewNode(int data) {
 
